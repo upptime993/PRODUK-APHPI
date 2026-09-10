@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ind">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>OurWebs</title>
+  </head>
+
+  <body>
+    <div class="OurWebs">
+      <div class="tittle">OurWebs.</div>
+      <div class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#abt">About</a></li>
+        <li><a href="#" class="order" onclick="bukaFormPesan('Bakso Ikan'); return false;">Order Now</a></li>
+      </div>
+    </div>
+
+    <div class="banner" id="home">
+      <div class="teks">
+        <h3>Kreasi Olahan Hasil Perikanan</h3>
+        <h1>Nikmati Kreasi Lezat Karya Siswa APHPI</h1>
+      </div>
+    </div>
+
+    <div class="menu-preview" id="menu">
+      <div class="menu-item menu1">
+        <img src="bakso.jpg" alt="Bakso Ikan" id="gambar1" />
+        <div class="teks-menu">
+          <h2>Bakso Ikan</h2>
+          <span class="harga">Rp 15.000 <small>/ pack</small></span>
+          <p>Bakso Ikan merupakan produk olahan hasil perikanan yang dibuat dari daging ikan pilihan dan diolah menjadi bakso dengan tekstur kenyal serta cita rasa gurih. Produk ini dikemas secara praktis sehingga mudah disimpan dan diolah menjadi berbagai hidangan, seperti sup, bakso kuah, maupun camilan. Dengan rasa yang lezat dan penyajian yang mudah, Bakso Ikan menjadi salah satu kreasi olahan perikanan yang menarik untuk dinikmati bersama keluarga.</p>
+          <a href="#" class="btn-beli" onclick="bukaFormPesan('Bakso Ikan'); return false;">Pesan Sekarang</a>
+        </div>
+      </div>
+
+      <div class="menu-item menu2">
+        <div class="teks-menu">
+          <h2>Otak-Otak Soebay</h2>
+          <span class="harga">Rp 18.000 <small>/ pack</small></span>
+          <p>Otak-Otak Soebay merupakan produk olahan ikan yang memiliki cita rasa gurih dan tekstur lembut. Diolah dengan bumbu pilihan, produk ini menawarkan sensasi rasa khas yang cocok dinikmati sebagai camilan maupun hidangan pendamping. Dikemas secara praktis dan disimpan dalam keadaan beku, Otak-Otak Soebay dapat menjadi pilihan olahan perikanan yang mudah disajikan dan nikmat untuk berbagai kesempatan.</p>
+          <a href="#" class="btn-beli" onclick="bukaFormPesan('Otak-Otak Soebay'); return false;">Pesan Sekarang</a>
+        </div>
+        <img src="otak.jpg" alt="Otak-Otak Soebay" />
+      </div>
+
+      <div class="menu-item menu3">
+        <img src="pepes.jpg" alt="Pepes Cakalang" />
+        <div class="teks-menu">
+          <h2>Pepes Cakalang</h2>
+          <span class="harga">Rp 20.000 <small>/ pack</small></span>
+          <p>Pepes Cakalang merupakan olahan ikan cakalang yang dipadukan dengan bumbu rempah untuk menghasilkan cita rasa gurih dan aroma khas pepes. Produk ini dikemas menggunakan daun sehingga memberikan kesan tradisional yang kuat sekaligus menjaga keunikan penyajiannya. Dengan perpaduan rasa ikan dan bumbu yang lezat, Pepes Cakalang menjadi salah satu kreasi olahan hasil perikanan yang cocok dinikmati sebagai hidangan pendamping nasi maupun sajian keluarga.</p>
+          <a href="#" class="btn-beli" onclick="bukaFormPesan('Pepes Cakalang'); return false;">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" id="abt">
+      <div class="abimg">
+        <img src="about.jpg" alt="">
+      </div>
+      <div class="teks-ab">
+        <h1>About (You) APHPI</h1>
+        <p>Agribisnis Pengolahan Hasil Perikanan (APHPI) merupakan salah satu kompetensi keahlian yang berfokus pada pengolahan hasil perikanan menjadi produk pangan yang bernilai tambah, berkualitas, dan siap dinikmati. Melalui pembelajaran teori dan praktik, siswa mempelajari berbagai proses pengolahan ikan, mulai dari pemilihan bahan baku, penanganan hasil perikanan, teknik produksi, hingga pengemasan produk</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>OurWebs.</h2>
+          <p>
+            Website display produk jurusan APHPI yang dirancang dan dikembangkan oleh siswa-siswi RPL kelompok 7 beranggotakan tiga orang. Website ini menjadi media untuk memperkenalkan berbagai kreasi olahan hasil perikanan karya siswa APHPI.
+          </p>
+        </div>
+    
+        <div class="footer-links">
+          <h3>Nama Anggota Kelompok 7 :</h3>
+          <p> Ridho Hidayat</p>
+          <p> Ikbal Sahril Ramadhan</p>
+          <p>Dava Nugraha Saputra</p>
+          <p>Manda Ramadhanti<p>
+        </div>
+    
+        <div class="footer-contact">
+          <h3>Kontak:</h3>
+          <p>Kelompok 7</p>
+          <p>Kelas 11</p>
+          <p>Jurusan RPL</p>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© 2026 Kelompok 7 RPL. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-box">
+        <h2>Form Pemesanan</h2>
+        <form id="formPesan">
+          <label for="produk">Pilih Makanan/Produk</label>
+          <select id="produk" name="produk" required>
+            <option value="Bakso Ikan">Bakso Ikan - Rp 15.000/pack</option>
+            <option value="Otak-Otak Soebay">Otak-Otak Soebay - Rp 18.000/pack</option>
+            <option value="Pepes Cakalang">Pepes Cakalang - Rp 20.000/pack</option>
+          </select>
+
+          <label for="nama">Nama Pembeli</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+
+          <label for="jumlah">Jumlah Pesanan</label>
+          <input type="number" id="jumlah" name="jumlah" min="1" value="1" required />
+
+          <label for="wa">Nomor WA Pembeli</label>
+          <input type="tel" id="wa" name="wa" placeholder="Contoh: 081234567890" required />
+
+          <div class="modal-actions">
+            <button type="button" class="btn-batal" onclick="tutupFormPesan()">Batal</button>
+            <button type="submit" class="btn-kirim">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.navbar a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href").slice(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+
+    <script>
+      const NOMOR_WA_TOKO = "6281774954859"; 
+
+      function bukaFormPesan(namaProduk) {
+        document.getElementById("produk").value = namaProduk;
+        document.getElementById("modalOverlay").classList.add("aktif");
+      }
+
+      function tutupFormPesan() {
+        document.getElementById("modalOverlay").classList.remove("aktif");
+        document.getElementById("formPesan").reset();
+      }
+
+      document.getElementById("modalOverlay").addEventListener("click", function (e) {
+        if (e.target === this) tutupFormPesan();
+      });
+
+      document.getElementById("formPesan").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const produk = document.getElementById("produk").value;
+        const nama = document.getElementById("nama").value.trim();
+        const jumlah = document.getElementById("jumlah").value;
+        const wa = document.getElementById("wa").value.trim();
+
+        const pesan =
+          "Halo, saya ingin memesan produk APHPI:\n" +
+          "Produk: " + produk + "\n" +
+          "Nama Pembeli: " + nama + "\n" +
+          "Jumlah Pesanan: " + jumlah + "\n" +
+          "No. WA Pembeli: " + wa;
+
+        const link = "https://wa.me/" + NOMOR_WA_TOKO + "?text=" + encodeURIComponent(pesan);
+        window.open(link, "_blank");
+
+        tutupFormPesan();
+      });
+    </script>
+  </body>
+</html>
