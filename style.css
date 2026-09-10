@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   font-family: 'Poppins', serif;
+  overflow-x: hidden;
 }
 
 .OurWebs {
@@ -236,6 +237,23 @@ body {
   .menu2 img {
     order: 1;
   }
+
+  .footer {
+    padding: 40px 30px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-brand p,
+  .footer-contact p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -294,41 +312,67 @@ body {
     font-size: 13px;
     padding: 10px 20px;
   }
+
+  .footer {
+    padding: 30px 20px 15px;
+  }
+
+  .footer-brand h2 {
+    font-size: 22px;
+  }
 }
 .about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
   scroll-margin-top: 100px;
 }
 .about img {
-  border-radius: 30px;
-  z-index: -1;
+  border-radius: 20px;
   opacity: 100%;
-  filter: blur(1px);
-  position: relative;
-  top: 70px;
+  width: min(600px, 100%);
+  display: block;
 }
  .teks-ab {
   background-color: rgba(245, 245, 245, 0.9);
-  z-index: 1;
-  position: absolute;
-  width: 700px;
-  padding: 60px;
-  left: 380px;
-  top: 2720px;
-  border-radius: 30px;
+  width: min(600px, 100%);
+  padding: 30px;
+  border-radius: 20px;
  }
   .teks-ab h1 {
   margin-bottom:20px;
   font-family: georgia, serif;
  }
 
+ /* Di layar lebar, tampilkan gambar & teks berdampingan dengan efek kartu menumpuk */
+ @media (min-width: 900px) {
+  .about {
+    flex-direction: row;
+    padding: 100px 20px;
+  }
+  .about img {
+    width: 500px;
+    max-width: 45%;
+    filter: blur(1px);
+  }
+  .teks-ab {
+    width: 500px;
+    max-width: 45%;
+    padding: 60px;
+    margin-left: -80px;
+    position: relative;
+    z-index: 1;
+  }
+ }
+
  .footer {
   background-color: rgb(238, 139, 17);
   color: white;
-  padding: 60px 150px 25px;
-  margin-top: 230px;
+  padding: 50px 150px 25px;
+  margin-top: 60px;
 }
 
 .footer-content {
